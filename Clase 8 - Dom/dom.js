@@ -10,7 +10,8 @@
 // NODOS ELEMENTOS
 // NODOS TEXTO
 
-// console.dir Muestra un listado interactivo de las propiedades de un objeto JS especifico.
+// console.dir Muestra un listado interactivo de las propiedades de un objeto JS especifico
+//en consola
 // Esta lista nos permite ver una lista de documentos hijos
 
 // console.dir(document.body);
@@ -20,7 +21,7 @@
 
 // Document: padre de todos los nodos
 // Element: todas las etiquetas (h1, h2, h3, div, etc)
-// attr: atributos de las etiquetas, como href, id, class, etc
+// attr: ATRIBUTOS  de las etiquetas, como href, id, class, etc
 // text: nodos de textos dentro de las etiquetas
 // Comments: los comentarios dentro del html
 
@@ -77,12 +78,17 @@ let labels1 = document.getElementsByTagName("label");
 let boton = document.getElementById("boton");
 
 function activateDark(){
-    section.style.background="black"
+    section.style.background="black";
+    titulo.style.color="black";
+
+    for(const parrafo of parrafos){
+        parrafo.style.color=`white`;
+    }
 }
 
 // ------- crear elementos ----------
 
-// para crear elementos se utiliza la funcion document.createElement()
+// para crear elementos se utiliza la funcion //////document.createElement()////////
 // y se debe indicar el nombre de la etiqueta HTML que representara ese elemento
 
 // Luego debe agregarse como hijo el nodo creado como append()
@@ -94,7 +100,8 @@ function activateDark(){
 
 // ------------- .VALUE -----------------
 
-// insertar textos en inputs, permitiendote acceder a los campos de texto
+// insertar textos en inputs (cajas donde rellena el usuario), 
+//  permitiendote acceder a los campos de texto
 // incluso permitiendole al usuario incorporar texto
 
 
@@ -146,3 +153,37 @@ lugarParaTabla.appendChild(table);
 // document.querySelector(#algo p)
 
 // QUERY SELECTOR ALL HACE UNA DEVOLUCION DE TODOS LOS ELEMENTOS CON ESTA CARACTERISTICA
+
+
+/////////////////
+
+// REPASO 
+
+// para llamar un elemento
+
+// ID: let seccion = document.getElementById("principal");
+
+// INNERHTML - Sirve para mostrar en consola lo que esta dentro de un elemento o seccion
+
+
+// GETELEMENTBYCLASSNAME - llama a las clases. Crea un array 
+
+let paises = document.GetElementByClassName()
+
+// GETELEMENTBYTAGNAME - llama por nombre de etiqueta, como div, section, etc. Crea un array
+
+// Para acceder a un elemento en puntual hay que llamar al let con corchetes y el Nro del
+// elemento en el Array. ej::::::::::::::  console.log(paises[1].innerHTML);
+
+// INNERTEXT -- TOMA EL TEXTO INTERNO DE UNA ETIQUETA
+// ej paises[1].innerText="coso"; 
+// Modifica el texto interno de la etiqueta 1 de la clase paises
+
+
+
+//////////// Revisar elementos de un array de clases o tags con el FOR OF 
+
+
+
+// METODO APPEND
+
